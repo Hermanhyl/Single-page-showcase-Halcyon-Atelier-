@@ -65,11 +65,11 @@
 
 .about__word-wrap {
   display: inline-block;
-  overflow: hidden;
+  /* Clip only at the bottom for the slide-up reveal — sides/top free */
+  clip-path: polygon(-50% -100%, 150% -100%, 150% 100%, -50% 100%);
   vertical-align: bottom;
-  /* em here inherits .about__passage's font-size so this is correctly scaled */
-  padding: 0.08em 0.12em 0.22em 0.06em;
-  margin: -0.08em 0 -0.22em -0.06em;
+  padding-bottom: 0.22em;
+  margin-bottom: -0.22em;
 }
 
 .about__word {

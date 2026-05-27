@@ -234,12 +234,12 @@
 .flip__cell {
   position: relative;
   display: inline-block;
-  overflow: hidden;
+  /* Clip only at the bottom (slide-up reveal); sides/top extend freely */
+  clip-path: polygon(-50% -100%, 150% -100%, 150% 100%, -50% 100%);
   vertical-align: bottom;
   line-height: 0.95;
-  /* em inherits .tile__name font-size — correctly sized */
-  padding: 0.08em 0.12em 0.22em 0.06em;
-  margin: -0.08em 0 -0.22em -0.06em;
+  padding-bottom: 0.22em;
+  margin-bottom: -0.22em;
 }
 
 .flip__cell--space { width: 0.28em; }

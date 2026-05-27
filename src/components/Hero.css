@@ -122,16 +122,17 @@
 
 .hero__letter-wrap {
   display: inline-block;
-  overflow: hidden;
+  /* Clip ONLY at the bottom edge — the reveal animates the letter up
+     from y:110% so only the bottom needs masking. Top/sides extend
+     freely beyond the wrap so swash/serif ornaments render unclipped. */
+  clip-path: polygon(-50% -100%, 150% -100%, 150% 100%, -50% 100%);
   line-height: 0.86;
-  /* Match the letter's font-size so the em-based padding scales with it */
+  /* Match the letter's font-size so em-based padding scales with it */
   font-size: clamp(76px, 18vw, 280px);
-  /* Generous box on every side: top for italic swashes/diacritics,
-     bottom for descenders, left/right for serif overshoot and the
-     italic 'A' / 'r' tail ornaments which extend past advance width.
-     Matching negative margins keep layout identical to the unpadded wrap. */
-  padding: 0.16em 0.14em 0.26em 0.14em;
-  margin: -0.16em -0.14em -0.26em -0.14em;
+  /* Bottom padding extends the wrap's bottom edge (clip line) below
+     the descender so y/p/g/j don't get clipped at rest. */
+  padding-bottom: 0.28em;
+  margin-bottom: -0.28em;
   vertical-align: baseline;
 }
 
@@ -182,11 +183,12 @@
 
 .hero__word-wrap {
   display: inline-block;
-  overflow: hidden;
+  /* Clip only at the bottom for the slide-up reveal */
+  clip-path: polygon(-50% -100%, 150% -100%, 150% 100%, -50% 100%);
   vertical-align: bottom;
-  /* em inherits .hero__manifesto font-size — correctly sized */
-  padding: 0.1em 0.18em 0.22em 0.08em;
-  margin: -0.1em 0 -0.22em -0.08em;
+  padding-bottom: 0.22em;
+  margin-bottom: -0.22em;
+  padding-right: 0.1em;
 }
 
 .hero__word {

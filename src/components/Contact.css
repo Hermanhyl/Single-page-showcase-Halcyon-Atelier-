@@ -35,15 +35,15 @@
 
 .contact__char-wrap {
   display: inline-block;
-  overflow: hidden;
+  /* Clip only at the bottom edge — slide-up reveal hides letters below.
+     Top and sides extend freely so italic 'd' ascender swash, 'p' tail,
+     and 'L' foot serif have unlimited room. */
+  clip-path: polygon(-50% -100%, 150% -100%, 150% 100%, -50% 100%);
   line-height: 0.88;
   vertical-align: bottom;
   white-space: pre;
-  /* em inherits .contact__title font-size — correctly sized.
-     Generous on every side for italic Fraunces swashes (s, d), the
-     'p' descender in "correspond.", and the L's foot serif. */
-  padding: 0.18em 0.16em 0.3em 0.16em;
-  margin: -0.18em -0.16em -0.3em -0.16em;
+  padding-bottom: 0.3em;
+  margin-bottom: -0.3em;
 }
 
 .contact__char {
