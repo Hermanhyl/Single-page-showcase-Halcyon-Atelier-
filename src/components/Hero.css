@@ -126,9 +126,12 @@
   line-height: 0.86;
   /* Match the letter's font-size so the em-based padding scales with it */
   font-size: clamp(76px, 18vw, 280px);
-  /* Vertical breathing room: top for italic swashes, bottom for descenders */
-  padding: 0.16em 0 0.26em 0;
-  margin: -0.16em 0 -0.26em 0;
+  /* Generous box on every side: top for italic swashes/diacritics,
+     bottom for descenders, left/right for serif overshoot and the
+     italic 'A' / 'r' tail ornaments which extend past advance width.
+     Matching negative margins keep layout identical to the unpadded wrap. */
+  padding: 0.16em 0.14em 0.26em 0.14em;
+  margin: -0.16em -0.14em -0.26em -0.14em;
   vertical-align: baseline;
 }
 
@@ -182,8 +185,8 @@
   overflow: hidden;
   vertical-align: bottom;
   /* em inherits .hero__manifesto font-size — correctly sized */
-  padding: 0.1em 0.1em 0.22em 0;
-  margin: -0.1em 0 -0.22em 0;
+  padding: 0.1em 0.18em 0.22em 0.08em;
+  margin: -0.1em 0 -0.22em -0.08em;
 }
 
 .hero__word {

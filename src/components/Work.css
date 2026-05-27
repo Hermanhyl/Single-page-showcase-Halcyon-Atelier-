@@ -238,8 +238,8 @@
   vertical-align: bottom;
   line-height: 0.95;
   /* em inherits .tile__name font-size — correctly sized */
-  padding: 0.08em 0 0.22em 0;
-  margin: -0.08em 0 -0.22em 0;
+  padding: 0.08em 0.12em 0.22em 0.06em;
+  margin: -0.08em 0 -0.22em -0.06em;
 }
 
 .flip__cell--space { width: 0.28em; }

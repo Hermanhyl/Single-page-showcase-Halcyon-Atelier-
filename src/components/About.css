@@ -68,8 +68,8 @@
   overflow: hidden;
   vertical-align: bottom;
   /* em here inherits .about__passage's font-size so this is correctly scaled */
-  padding: 0.08em 0 0.22em 0;
-  margin: -0.08em 0 -0.22em 0;
+  padding: 0.08em 0.12em 0.22em 0.06em;
+  margin: -0.08em 0 -0.22em -0.06em;
 }
 
 .about__word {
