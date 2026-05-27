@@ -124,9 +124,12 @@
   display: inline-block;
   overflow: hidden;
   line-height: 0.86;
-  /* Give descenders (y, p, g, j, q) room below the baseline so they don't clip */
-  padding-bottom: 0.22em;
-  margin-bottom: -0.22em;
+  /* Match the letter's font-size so the em-based padding scales with it */
+  font-size: clamp(76px, 18vw, 280px);
+  /* Vertical breathing room: top for italic swashes, bottom for descenders */
+  padding: 0.16em 0 0.26em 0;
+  margin: -0.16em 0 -0.26em 0;
+  vertical-align: baseline;
 }
 
 .hero__letter {
@@ -177,10 +180,10 @@
 .hero__word-wrap {
   display: inline-block;
   overflow: hidden;
-  /* Right padding for word spacing + bottom padding for descenders (Q, p, g, y) */
-  padding: 0.04em 0.1em 0.22em 0;
-  margin-bottom: -0.22em;
   vertical-align: bottom;
+  /* em inherits .hero__manifesto font-size — correctly sized */
+  padding: 0.1em 0.1em 0.22em 0;
+  margin: -0.1em 0 -0.22em 0;
 }
 
 .hero__word {

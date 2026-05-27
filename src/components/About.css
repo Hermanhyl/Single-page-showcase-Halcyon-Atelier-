@@ -67,9 +67,9 @@
   display: inline-block;
   overflow: hidden;
   vertical-align: bottom;
-  /* Bottom padding sized for full descender depth — many words have g/p/y */
-  padding-bottom: 0.22em;
-  margin-bottom: -0.16em;
+  /* em here inherits .about__passage's font-size so this is correctly scaled */
+  padding: 0.08em 0 0.22em 0;
+  margin: -0.08em 0 -0.22em 0;
 }
 
 .about__word {

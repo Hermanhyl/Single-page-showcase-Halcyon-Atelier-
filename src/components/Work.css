@@ -237,9 +237,9 @@
   overflow: hidden;
   vertical-align: bottom;
   line-height: 0.95;
-  /* Room for descenders (p in Pomelo, etc.) */
-  padding-bottom: 0.22em;
-  margin-bottom: -0.22em;
+  /* em inherits .tile__name font-size — correctly sized */
+  padding: 0.08em 0 0.22em 0;
+  margin: -0.08em 0 -0.22em 0;
 }
 
 .flip__cell--space { width: 0.28em; }
