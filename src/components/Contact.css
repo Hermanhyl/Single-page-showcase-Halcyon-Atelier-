@@ -39,6 +39,9 @@
   line-height: 0.88;
   vertical-align: bottom;
   white-space: pre;
+  /* Room for 'p' descender in "correspond." */
+  padding-bottom: 0.22em;
+  margin-bottom: -0.22em;
 }
 
 .contact__char {
@@ -134,8 +137,9 @@
 .contact__farewell-stack {
   position: relative;
   display: inline-block;
-  height: 1em;
-  min-width: 220px;
+  /* Tall enough to contain italic descenders (p in "presto", "pronto") */
+  height: 1.25em;
+  min-width: 240px;
   overflow: hidden;
   font-family: var(--serif);
   font-style: italic;

@@ -124,6 +124,9 @@
   display: inline-block;
   overflow: hidden;
   line-height: 0.86;
+  /* Give descenders (y, p, g, j, q) room below the baseline so they don't clip */
+  padding-bottom: 0.22em;
+  margin-bottom: -0.22em;
 }
 
 .hero__letter {
@@ -174,7 +177,10 @@
 .hero__word-wrap {
   display: inline-block;
   overflow: hidden;
-  padding: 0 0.1em 0.05em 0;
+  /* Right padding for word spacing + bottom padding for descenders (Q, p, g, y) */
+  padding: 0.04em 0.1em 0.22em 0;
+  margin-bottom: -0.22em;
+  vertical-align: bottom;
 }
 
 .hero__word {

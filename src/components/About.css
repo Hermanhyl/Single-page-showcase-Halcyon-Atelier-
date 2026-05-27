@@ -67,7 +67,9 @@
   display: inline-block;
   overflow: hidden;
   vertical-align: bottom;
-  padding-bottom: 0.06em;
+  /* Bottom padding sized for full descender depth — many words have g/p/y */
+  padding-bottom: 0.22em;
+  margin-bottom: -0.16em;
 }
 
 .about__word {
