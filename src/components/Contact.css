@@ -39,9 +39,11 @@
   line-height: 0.88;
   vertical-align: bottom;
   white-space: pre;
-  /* em inherits .contact__title font-size — correctly sized */
-  padding: 0.12em 0.12em 0.25em 0.12em;
-  margin: -0.12em -0.12em -0.25em -0.12em;
+  /* em inherits .contact__title font-size — correctly sized.
+     Generous on every side for italic Fraunces swashes (s, d), the
+     'p' descender in "correspond.", and the L's foot serif. */
+  padding: 0.18em 0.16em 0.3em 0.16em;
+  margin: -0.18em -0.16em -0.3em -0.16em;
 }
 
 .contact__char {
