@@ -1,0 +1,26 @@
+.marquee {
+  display: flex;
+  overflow: hidden;
+  width: 100%;
+  white-space: nowrap;
+}
+
+.marquee__track {
+  display: flex;
+  flex-shrink: 0;
+  will-change: transform;
+}
+
+.marquee__group {
+  display: flex;
+  align-items: center;
+  flex-shrink: 0;
+  gap: clamp(28px, 5vw, 60px);
+  padding-right: clamp(28px, 5vw, 60px);
+}
+
+.marquee__item {
+  display: inline-flex;
+  align-items: center;
+  flex-shrink: 0;
+}

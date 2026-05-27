@@ -1,0 +1,202 @@
+.contact {
+  padding-top: clamp(120px, 16vh, 200px);
+  padding-bottom: 0;
+  position: relative;
+  background: var(--bone);
+  overflow: hidden;
+}
+
+.contact__header {
+  max-width: 1500px;
+  margin: 0 auto 30px;
+}
+
+/* ---- giant headline ---- */
+
+.contact__title {
+  max-width: 1500px;
+  margin: 0 auto;
+  font-size: clamp(64px, 14vw, 220px);
+  line-height: 0.88;
+  letter-spacing: -0.04em;
+  font-variation-settings: 'opsz' 144, 'SOFT' 50, 'WONK' 1;
+  color: var(--ink);
+  display: flex;
+  flex-direction: column;
+  gap: 0;
+}
+
+.contact__title-l { padding-left: 0; }
+.contact__title-r {
+  padding-left: clamp(40px, 12vw, 220px);
+  color: var(--terracotta);
+  margin-top: clamp(-20px, -2vw, -8px);
+}
+
+.contact__char-wrap {
+  display: inline-block;
+  overflow: hidden;
+  line-height: 0.88;
+  vertical-align: bottom;
+  white-space: pre;
+}
+
+.contact__char {
+  display: inline-block;
+  will-change: transform;
+}
+
+.contact__char--accent {
+  font-style: italic;
+}
+
+/* ---- grid ---- */
+
+.contact__grid {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: clamp(28px, 4vw, 60px);
+  max-width: 1500px;
+  margin: clamp(60px, 10vh, 120px) auto 0;
+  padding-top: 24px;
+  border-top: 1px solid var(--hairline);
+}
+
+.contact__col {
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+}
+
+.contact__line {
+  font-family: var(--serif);
+  font-weight: 300;
+  font-variation-settings: 'opsz' 144, 'SOFT' 60;
+  font-size: clamp(18px, 1.6vw, 22px);
+  line-height: 1.35;
+  color: var(--ink);
+}
+
+.contact__line--status {
+  position: relative;
+  padding-left: 22px;
+}
+
+.contact__dot {
+  position: absolute;
+  left: 0;
+  top: 0.55em;
+  width: 8px;
+  height: 8px;
+  border-radius: 50%;
+  background: var(--terracotta);
+}
+
+.contact__link {
+  color: var(--terracotta);
+  border-bottom: 1px solid var(--terracotta);
+  padding-bottom: 2px;
+  transition: color 0.4s ease, border-color 0.4s ease;
+}
+
+.contact__link:hover {
+  color: var(--terracotta-deep);
+  border-color: var(--terracotta-deep);
+}
+
+.contact__sub {
+  font-family: var(--mono);
+  font-size: 11px;
+  letter-spacing: 0.05em;
+  color: var(--taupe);
+}
+
+/* ---- flourish drawing ---- */
+
+.contact__flourish {
+  max-width: 1500px;
+  margin: clamp(60px, 10vh, 100px) auto 0;
+  padding: 0 0;
+  opacity: 0.85;
+}
+
+/* ---- cycling farewell ---- */
+
+.contact__farewell {
+  max-width: 1500px;
+  margin: 0 auto clamp(40px, 6vh, 80px);
+  display: flex;
+  align-items: center;
+  gap: 24px;
+  padding-top: 16px;
+}
+
+.contact__farewell-stack {
+  position: relative;
+  display: inline-block;
+  height: 1em;
+  min-width: 220px;
+  overflow: hidden;
+  font-family: var(--serif);
+  font-style: italic;
+  font-variation-settings: 'opsz' 144, 'SOFT' 100, 'WONK' 1;
+  font-size: clamp(28px, 3vw, 44px);
+  line-height: 1;
+  color: var(--ink);
+}
+
+.contact__farewell-word {
+  position: absolute;
+  left: 0;
+  top: 0;
+  white-space: nowrap;
+  will-change: transform;
+}
+
+/* ---- bottom marquee ---- */
+
+.contact__marquee {
+  border-top: 1px solid var(--ink);
+  border-bottom: 1px solid var(--ink);
+  background: var(--ink);
+  color: var(--bone);
+  padding: 32px 0;
+  font-family: var(--serif);
+  font-size: clamp(48px, 9vw, 140px);
+  line-height: 0.9;
+  letter-spacing: -0.03em;
+  font-variation-settings: 'opsz' 144, 'SOFT' 60;
+}
+
+.contact__marquee-glyph {
+  color: var(--terracotta);
+  font-style: normal;
+  font-family: var(--serif);
+  font-size: 0.6em;
+  vertical-align: 0.1em;
+}
+
+/* ---- base footer ---- */
+
+.contact__base {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  gap: 20px;
+  padding: 22px var(--gutter);
+  background: var(--bone);
+}
+
+@media (max-width: 860px) {
+  .contact__grid {
+    grid-template-columns: 1fr 1fr;
+  }
+  .contact__title-r { padding-left: 0; }
+  .contact__farewell { flex-direction: column; align-items: flex-start; gap: 8px; }
+}
+
+@media (max-width: 540px) {
+  .contact__grid {
+    grid-template-columns: 1fr;
+  }
+}
